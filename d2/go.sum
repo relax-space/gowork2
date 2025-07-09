@@ -1,2 +1,4 @@
 github.com/relax-space/gowork2/d1 v0.1.0 h1:3sdQNIPPWxw5M7cd5b9hSAPeur69Iupj45OFtw/MUZE=
 github.com/relax-space/gowork2/d1 v0.1.0/go.mod h1:kDuTREcGodVW4osdjuW/9ebh6CGsFAAZE5ac10UpETo=
+github.com/relax-space/gowork2/d3 v0.0.0-20250709124657-df154a02a154 h1:cAlV92anHA5P5/MQ0FEstQZXm2XrKq80l4TefFwE66A=
+github.com/relax-space/gowork2/d3 v0.0.0-20250709124657-df154a02a154/go.mod h1:aqGyhBzcUkjiYOL6RKvf0bMwncQhsDjNN+YcjQrbi74=

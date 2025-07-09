@@ -43,6 +43,19 @@ go: found github.com/relax-space/gowork2/d1 in github.com/relax-space/gowork2/d1
 
 ```
 
-因为版本会代理服务器缓存了,无法删除, 所以我打算创建一个 d3 来做测试(没有版本的)
+因为版本会代理服务器缓存了,无法删除, 所以我打算创建一个 d3 来做测试(没有版本的),也是可以的
 
+```bash
+D:\source\go\gowork2\d2>go mod tidy
+go: finding module for package github.com/relax-space/gowork2/d3
+go: downloading github.com/relax-space/gowork2/d3 v0.0.0-20250709124657-df154a02a154
+go: found github.com/relax-space/gowork2/d3 in github.com/relax-space/gowork2/d3 v0.0.0-20250709124657-df154a02a154
+```
 
+```bash go.sum
+github.com/relax-space/gowork2/d1 v0.1.0 h1:3sdQNIPPWxw5M7cd5b9hSAPeur69Iupj45OFtw/MUZE=
+github.com/relax-space/gowork2/d1 v0.1.0/go.mod h1:kDuTREcGodVW4osdjuW/9ebh6CGsFAAZE5ac10UpETo=
+github.com/relax-space/gowork2/d3 v0.0.0-20250709124657-df154a02a154 h1:cAlV92anHA5P5/MQ0FEstQZXm2XrKq80l4TefFwE66A=
+github.com/relax-space/gowork2/d3 v0.0.0-20250709124657-df154a02a154/go.mod h1:aqGyhBzcUkjiYOL6RKvf0bMwncQhsDjNN+YcjQrbi74=
+
+```
