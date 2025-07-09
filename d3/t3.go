@@ -8,6 +8,6 @@ func Calc(a, b int) int {
 	return a*b + 10
 }
 
-func Calc1(a, b int) int {
+func Calc2(a, b int) int {
 	return a*b + 20
 }

@@ -1,3 +1,21 @@
+总结一句话:如果想要 github 仓库包含多个模块, 用 go.work,同时,用 replace 是最方便的,require 里面的版本号随便写,不超过 v1.0.0 就行,然后发布的时候, 参考 dockerfile 里面的脚本
+
+```bash
+
+module github.com/relax-space/gowork2/d2
+
+go 1.24.4
+
+require (
+	github.com/relax-space/gowork2/d1 v0.1.0
+        #事实上,github上并没有v1.0.0这个标签
+	github.com/relax-space/gowork2/d3 v1.0.0
+)
+
+replace github.com/relax-space/gowork2/d3 => ../d3
+
+```
+
 当我执行`go mod tidy`会报错, 因为此时, 我的 d1 还没有提交到 github.com
 
 ```bash
@@ -34,7 +52,6 @@ git tag d1/v0.1.0
 git push origin d1/v0.1.0
 ```
 
-
 ```
 git tag -d d1/v0.1.0
 git push --delete origin d1/v0.1.0
@@ -50,7 +67,7 @@ go: found github.com/relax-space/gowork2/d1 in github.com/relax-space/gowork2/d1
 ```
 
 因为版本会代理服务器缓存了,无法删除, 所以我打算创建一个 d3 来做测试(没有版本的),本地也是可以的,
-但是有个问题, 如果服务器不想用 go.work 的话, 那么需要提交 git 后, 然后回到 d2 目录, 删除 go.sum 中的 d3,执行 go mod tidy,然后再提交 git
+但是有个问题, 如果服务器不想用 go.work 的话, 那么需要提交 git 后, 然后回到 d2 目录, 更新最新的提交`go get -u github.com/relax-space/gowork2/d3@b5b511905fdba0d586136710e0cac1a3805168e2`,再执行`go mod tidy`删除旧版本,再提交
 
 ```bash
 D:\source\go\gowork2\d2>go mod tidy

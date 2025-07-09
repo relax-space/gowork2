@@ -15,8 +15,8 @@ func main() {
 	fmt.Printf("Multi 结果是%d\n", result)
 
 	result = d3.Calc(1, 2)
-	fmt.Printf("Calc 结果是%d", result)
+	fmt.Printf("Calc 结果是%d\n", result)
 
-	result = d3.Calc1(1, 2)
+	result = d3.Calc2(1, 2)
 	fmt.Printf("Calc1 结果是%d", result)
 }
