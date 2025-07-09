@@ -11,9 +11,12 @@ func main() {
 	result := d1.Add(1, 2)
 	fmt.Printf("Add 结果是%d\n", result)
 
-	result3 := d3.Multi(1, 2)
-	fmt.Printf("Multi 结果是%d\n", result3)
+	result = d3.Multi(1, 2)
+	fmt.Printf("Multi 结果是%d\n", result)
 
-	result4 := d3.Calc(1, 2)
-	fmt.Printf("Calc 结果是%d", result4)
+	result = d3.Calc(1, 2)
+	fmt.Printf("Calc 结果是%d", result)
+
+	result = d3.Calc1(1, 2)
+	fmt.Printf("Calc1 结果是%d", result)
 }
